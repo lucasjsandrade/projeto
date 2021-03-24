@@ -1,1 +1,18 @@
-teste
+<html>
+  <head>
+  </head>
+  <body>
+    @php $ds_relatorio  = 'teste banco de dados 2019 Çá â '; @endphp
+    @include('layouts.cabecalhos.a4')
+      <table>
+        @foreach($ocorrencia as $oco)
+          <tr>
+            <td>{{funFormataData($oco->DT_OCORRENCIA)}}</td>
+          </tr>
+          <tr>
+            <td>{{$oco->DS_RESPOSTA}}</td>
+          </tr>
+        @endforeach   
+      </table>
+   </body>
+</html>
